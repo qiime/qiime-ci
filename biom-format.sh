@@ -7,5 +7,8 @@ sed -i -e"s?log-level: INFO?log-level: DEBUG?" qiime-deploy-conf/biom-format-1.1
 cp -r /home/ubuntu/qiime_software biom_format_software
 python qiime-deploy/qiime-deploy.py biom_format_software -f qiime-deploy-conf/biom-format-1.1.2-dev/biom-format.conf --force-remove-failed-dirs --force-remove-previous-repos
 source biom_format_software/activate.sh
-print_biom_python_config.py
-python biom_format_software/biom-format-*-repository-*/python-code/tests/all_tests.py
+biom show-install-info
+cd biom_format_software/biom-format-*-repository-*/python-code/tests
+# Need -P because of some funkiness with the Cython code and nose not playing
+# well together.
+nosetests -P

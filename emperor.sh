@@ -7,5 +7,5 @@ sed -i -e"s?log-level: INFO?log-level: DEBUG?" qiime-deploy-conf/emperor-0.9.2-d
 cp -r /home/ubuntu/qiime_software emperor_software
 python qiime-deploy/qiime-deploy.py emperor_software -f qiime-deploy-conf/emperor-0.9.2-dev/emperor.conf --force-remove-failed-dirs --force-remove-previous-repos
 source emperor_software/activate.sh
-cd emperor_software/emperor-*-repository-*
+cd emperor_software/emperor-0.9.2-repository-*
 python tests/all_tests.py

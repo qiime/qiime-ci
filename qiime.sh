@@ -30,4 +30,8 @@ export PATH=/home/ubuntu/jenkins-support:$PATH
 
 # We can finally test QIIME!
 print_qiime_config.py -t
+# Start the IPython's cluster before running all tests
+parallel start --profile default -n 4
+# Wait for 10 seconds, so IPython can get up
+sleep 10
 python $WORKSPACE/qiime/tests/all_tests.py

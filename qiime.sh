@@ -5,6 +5,7 @@
 rm -rf qiime-deploy qiime-deploy-conf qiime_software anaconda
 git clone git://github.com/qiime/qiime-deploy.git
 git clone git://github.com/qiime/qiime-deploy-conf.git
+sed -i -e"s?log-level: INFO?log-level: DEBUG?" qiime-deploy-conf/qiime-dev/qiime.conf
 
 # Setup for python and core dependencies available via Miniconda. Taken and
 # modified from https://github.com/biocore/bipy/blob/master/.travis.yml and

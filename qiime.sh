@@ -15,7 +15,7 @@ chmod +x miniconda.sh
 ./miniconda.sh -b -p $WORKSPACE/anaconda
 export PATH=$WORKSPACE/anaconda/bin:$PATH
 conda update --quiet --yes conda
-conda create --quiet --yes -n test_env python=2.7 pip numpy scipy matplotlib h5py>=2.2.0 pandas
+conda create --quiet --yes -n test_env python=2.7 pip numpy scipy matplotlib h5py pandas
 source activate test_env
 
 # Install QIIME and the rest of its Python dependencies.

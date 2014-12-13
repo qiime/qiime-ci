@@ -19,7 +19,7 @@ conda create --quiet --yes -n test_env python=2.7 pip numpy=1.7.1 scipy=0.13.0 m
 source activate test_env
 
 # Install QIIME and the rest of its Python dependencies.
-pip install --quiet --allow-all-external --allow-unverified bipy --process-dependency-links $WORKSPACE/qiime
+pip install --allow-all-external --allow-unverified bipy --process-dependency-links $WORKSPACE/qiime
 
 # Install QIIME's non-Python dependencies.
 cp -r /home/ubuntu/qiime_software .

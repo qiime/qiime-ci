@@ -10,7 +10,7 @@ sed -i -e"s?log-level: INFO?log-level: DEBUG?" qiime-deploy-conf/qiime-dev/qiime
 # Setup for python and core dependencies available via Miniconda. Taken and
 # modified from https://github.com/biocore/bipy/blob/master/.travis.yml and
 # https://gist.github.com/dan-blanchard/7045057
-wget -q http://repo.continuum.io/miniconda/Miniconda-2.2.2-Linux-x86_64.sh -O miniconda.sh
+wget -q http://repo.continuum.io/miniconda/Miniconda3-3.7.3-Linux-x86_64.sh -O miniconda.sh
 chmod +x miniconda.sh
 ./miniconda.sh -b -p $WORKSPACE/anaconda
 export PATH=$WORKSPACE/anaconda/bin:$PATH

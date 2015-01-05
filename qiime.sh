@@ -31,5 +31,5 @@ source qiime_software/activate.sh
 export PATH=/home/ubuntu/jenkins-support:$PATH
 
 # We can finally test QIIME!
-print_qiime_config.py -t
+print_qiime_config.py -tf
 python $WORKSPACE/qiime/tests/all_tests.py

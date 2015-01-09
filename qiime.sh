@@ -25,8 +25,6 @@ pip install --allow-all-external --allow-unverified bipy --process-dependency-li
 cp -r /home/ubuntu/qiime_software .
 rm -rf qiime_software/*-latest-r-package qiime_software/r-*-release qiime_software/SeqPrep-latest-repository*
 python qiime-deploy/qiime-deploy.py qiime_software -f qiime-deploy-conf/qiime-dev/qiime.conf --force-remove-failed-dirs --force-remove-previous-repos
-sed -i -e's/97_otus.fasta/61_otus.fasta/' qiime_software/qiime_config
-sed -i -e's/97_otu_taxonomy.txt/61_otu_taxonomy.txt/' qiime_software/qiime_config
 source qiime_software/activate.sh
 export PATH=/home/ubuntu/jenkins-support:$PATH
 

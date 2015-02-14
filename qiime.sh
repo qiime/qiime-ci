@@ -28,9 +28,6 @@ python qiime-deploy/qiime-deploy.py qiime_software -f qiime-deploy-conf/qiime-1.
 source qiime_software/activate.sh
 export PATH=/home/ubuntu/jenkins-support:$PATH
 
-# Create a matplotlibrc file to specify a backend that doesn't require DISPLAY.
-echo 'backend : agg' > matplotlibrc
-
 # We can finally test QIIME!
 print_qiime_config.py -tf
 python $WORKSPACE/qiime/tests/all_tests.py

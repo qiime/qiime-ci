@@ -28,6 +28,9 @@ python qiime-deploy/qiime-deploy.py qiime_software -f qiime-deploy-conf/qiime-1.
 source qiime_software/activate.sh
 export PATH=/home/ubuntu/jenkins-support:$PATH
 
+mkdir -p /home/ubuntu/.config/matplotlib
+echo 'backend : agg' > /home/ubuntu/.config/matplotlib/matplotlibrc
+
 # We can finally test QIIME!
 print_qiime_config.py -tf
 python $WORKSPACE/qiime/tests/all_tests.py

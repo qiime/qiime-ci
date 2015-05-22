@@ -5,7 +5,7 @@
 rm -rf qiime-deploy qiime-deploy-conf qiime_software anaconda
 git clone git://github.com/qiime/qiime-deploy.git
 git clone git://github.com/qiime/qiime-deploy-conf.git
-sed -i -e"s?log-level: INFO?log-level: DEBUG?" qiime-deploy-conf/qiime-1.9.0/qiime.conf
+sed -i -e"s?log-level: INFO?log-level: DEBUG?" qiime-deploy-conf/qiime-1.9.1/qiime.conf
 
 # Setup for python and core dependencies available via Miniconda. Taken and
 # modified from https://github.com/biocore/bipy/blob/master/.travis.yml and
@@ -24,7 +24,7 @@ pip install --allow-all-external --allow-unverified bipy --process-dependency-li
 # Install QIIME's non-Python dependencies.
 cp -r /home/ubuntu/qiime_software .
 rm -rf qiime_software/*-latest-r-package qiime_software/r-*-release qiime_software/SeqPrep-latest-repository*
-python qiime-deploy/qiime-deploy.py qiime_software -f qiime-deploy-conf/qiime-1.9.0/qiime.conf --force-remove-failed-dirs --force-remove-previous-repos
+python qiime-deploy/qiime-deploy.py qiime_software -f qiime-deploy-conf/qiime-1.9.1/qiime.conf --force-remove-failed-dirs --force-remove-previous-repos
 source qiime_software/activate.sh
 export PATH=/home/ubuntu/jenkins-support:$PATH
 

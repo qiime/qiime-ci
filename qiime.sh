@@ -10,11 +10,10 @@ sed -i -e"s?log-level: INFO?log-level: DEBUG?" qiime-deploy-conf/qiime-1.9.1/qii
 # Setup for python and core dependencies available via Miniconda. Taken and
 # modified from https://github.com/biocore/bipy/blob/master/.travis.yml and
 # https://gist.github.com/dan-blanchard/7045057
-wget -q http://repo.continuum.io/miniconda/Miniconda3-3.7.3-Linux-x86_64.sh -O miniconda.sh
+wget -q https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
 chmod +x miniconda.sh
 ./miniconda.sh -b -p $WORKSPACE/anaconda
 export PATH=$WORKSPACE/anaconda/bin:$PATH
-conda update --quiet --yes conda
 conda create --quiet --yes -n test_env python=2.7 pip numpy scipy matplotlib h5py pandas
 source activate test_env
 

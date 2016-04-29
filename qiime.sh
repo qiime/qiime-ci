@@ -14,7 +14,7 @@ wget -q https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O
 chmod +x miniconda.sh
 ./miniconda.sh -b -p $WORKSPACE/anaconda
 export PATH=$WORKSPACE/anaconda/bin:$PATH
-conda create --quiet --yes -n test_env python=2.7 pip numpy=1.9.2 scipy=0.16.0 matplotlib=1.5.0 h5py pandas=0.16.2
+conda create --quiet --yes -n test_env python=2.7 pip numpy=1.9.2 scipy=0.16.0 matplotlib=1.4.3 h5py pandas=0.16.2
 source activate test_env
 
 # Install QIIME and the rest of its Python dependencies.
